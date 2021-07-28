@@ -1,0 +1,90 @@
+:root {
+    --main-background: #7D6F86;
+
+    --header: #F9564F;
+    --header-darker1: #F8403A;
+    --header-lighter1: #faccca;
+}
+
+
+#PlayDiv {
+  position: absolute;
+  top: 83px;
+  left: 36px;
+  /* margin: 83px 0 0 36px; */
+}
+#HallOfFameDiv {
+  position: absolute;
+  top: 248px;
+  left: 36px;
+  /* margin: 17px 0 0 36px; */
+}
+#ExitDiv {
+  position: absolute;
+  vertical-align: bottom;
+  bottom: 19px;
+  left: 36px;
+  /* margin: 0 0 19px 36px; */
+}
+
+
+#PlayButton {
+
+  width: 226px;
+  height: 128px;
+  line-height: 128px;
+  text-align: left;
+
+}
+#HallOfFameButton {
+  width: 226px;
+  height: 128px;
+  line-height: 64px;
+  /* word-wrap: break-word; */
+  text-align: left;
+
+}
+#ExitButton {
+  text-align: left;
+
+}
+
+#GameTitleDiv {
+  position: relative;
+  color: var(--header);
+  cursor: default;
+  user-select: none;
+}
+#LanguageTitle {
+  position: absolute;
+  transform: rotate(90deg);
+
+  width: 454px;
+  height: 166px;
+
+  /* 257px-227px+83px */
+  /* const-width/2 + height/2 */
+  left: 113px;
+
+  /* 58px+(227px-83px) */
+  /* const + (width/2 - height/2) */
+  top: 202px; 
+  margin: 0;
+  font-size: 94px;
+}
+#LearnQuizTitle {
+  font-size: 61px; 
+  word-wrap: break-word;
+  width: 209px;
+  height: 205px;
+  
+  /* 113+227+83-23 */
+  /* LanguageTitle.left + LanguageTitle.width/2 + LanguageTitle.height/2 -const */
+  left: 400px;
+  top: 58px; 
+
+  position: absolute;
+}
+.button {
+  font-weight:500;
+}

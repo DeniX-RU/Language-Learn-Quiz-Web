@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    th:fragment="layout(content,links)">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/style.css" th:href="@{/styles/style.css}">
+    
+    <!--/* Per-page placeholder for additional links */-->
+    <th:block th:replace="${links}" />
+</head>
+<body>
+    <div class="container">
+        <div class="scene">
+            <div th:replace="${content}"></div>
+        </div>
+    </div>
+</body>
+</html>
