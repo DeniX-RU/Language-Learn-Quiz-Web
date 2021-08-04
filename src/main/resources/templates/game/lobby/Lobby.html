@@ -8,18 +8,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="../../static/styles/lobby/style.css" th:href="@{/styles/lobby/style.css}">
+    <link rel="stylesheet" href="../../../static/styles/lobby/style.css" th:href="@{/styles/lobby/style.css}">
 </head>
 <body>
     <section>
         <div id="PlayDiv">
-            <a class="button" id="PlayButton">Play</a>
+            <a th:href="setup" class="button" id="PlayButton">Play</a>
             </div>
         <div id="HallOfFameDiv">
-            <a class="button" id="HallOfFameButton">Hall of Fame</a>
-            </div>
-        <div id="ExitDiv">
-            <a class="button" id="ExitButton">Exit</a>
+            <a th:href="hallOfFame" class="button" id="HallOfFameButton">Hall of Fame</a>
             </div>
         <div id="GameTitleDiv">
             <p id="LanguageTitle" style="font-size: 94px;">Language</p>

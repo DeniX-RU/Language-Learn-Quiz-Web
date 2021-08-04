@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    th:replace="base::layout(~{::section},~{::link})">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../static/styles/game/setup/style.css" th:href="@{/styles/game/setup/style.css}">
+
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div id="BackDiv">
+            <a href="#" class="button" id="BackButton">Back</a>
+        </div>
+        <div id="options-grid">
+            <p>Choose difficulty: </p>
+            <div id="difficultyRadioDiv">
+                <label><input type="radio">0</label>
+                <label><input type="radio">1</label>
+                <label><input type="radio">2</label>
+            </div>
+            <p>Choose type of the game: </p>
+            <div id="typeOfGameRadioDiv">
+                <label><input type="radio">0</label>
+                <label><input type="radio">1</label>
+                <label><input type="radio">2</label>
+            </div>
+            <p>Do you want to name the part of speech of the given word?</p>
+            <div id="usingPartOfSpeechDiv">
+                <input type="checkbox">
+            </div>
+            <p>Your username: </p>
+            <div id="usernameInputDiv">
+                <input type="text">
+            </div>
+        </div>
+        <div id="PlayDiv">
+            <a href="#" class="button" id="PlayButton">Play</a>
+        </div>
+    </section>
+</body>
+</html>

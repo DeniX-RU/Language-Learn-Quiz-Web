@@ -29,7 +29,7 @@
     /*https://coolors.co/7d6f86-ffffff-f9564f-240115*/
 
 
-    --text-fill: var(--text);
+    color: var(--text);
     font-family: 'Courier New', Courier, monospace;
 }
 html {
@@ -38,6 +38,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none
 }
 .container {
     position: relative;
@@ -54,7 +55,11 @@ html {
     overflow: hidden;
 }
 
-/* //////////////// Default Button //////////////// */
+P {
+    font-size: 15pt;
+}
+
+/* //////////////// Default Button (<a>) //////////////// */
 .button {
     top: 0;
     left: 0;
