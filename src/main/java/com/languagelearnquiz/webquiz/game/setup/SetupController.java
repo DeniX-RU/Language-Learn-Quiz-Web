@@ -1,19 +1,15 @@
 package com.languagelearnquiz.webquiz.game.setup;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping(path="/game")
+@RequestMapping("game/setup")
 public class SetupController {
-    @GetMapping
-    public String lobbyHTML(){
-        return "lobby/Lobby";
+    @PostMapping("launchGame")
+    public String lg() {
+        System.out.println("hello!");
+        return "";
     }
-
-//    @GetMapping("/hello")
-//    public String greeting(){
-//
-//    }
 }

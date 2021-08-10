@@ -8,40 +8,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../../static/styles/game/setup/style.css" th:href="@{/styles/game/setup/style.css}">
+    <link rel="stylesheet" href="../../../static/styles/game/setup/style.css" th:href="@{/styles/game/setup/style.css}">
 
     <title>Document</title>
 </head>
 <body>
     <section>
-        <div id="BackDiv">
-            <a href="#" class="button" id="BackButton">Back</a>
-        </div>
-        <div id="options-grid">
-            <p>Choose difficulty: </p>
-            <div id="difficultyRadioDiv">
-                <label><input type="radio">0</label>
-                <label><input type="radio">1</label>
-                <label><input type="radio">2</label>
+        <form method="POST" th:action="@{launchGame}">
+            <div id="BackDiv">
+                <a href="#" id="BackButton">Back</a>
             </div>
-            <p>Choose type of the game: </p>
-            <div id="typeOfGameRadioDiv">
-                <label><input type="radio">0</label>
-                <label><input type="radio">1</label>
-                <label><input type="radio">2</label>
+            <div id="options-grid">
+                <p>Choose difficulty: </p>
+                <div id="difficultyRadioDiv radioDiv">
+<!--                    <ul>-->
+<!--                        <li th:each="difficulty : ${difficulties}">-->
+<!--&lt;!&ndash;                            TODO get rid of difficultyInput&ndash;&gt;-->
+<!--                            <label for="difficultyInput" class="radioLabelContainer">-->
+<!--                                <p th:text="${difficulty.title}"></p>-->
+<!--                                <input id="difficultyInput" type="radio" th:field="*{difficulties}" th:value="${difficulty.index}">-->
+<!--                                <span class="checkmark"></span>-->
+<!--                            </label>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+                    <label for="difficulty0" class="radioLabelContainer">
+                        <p th:text="${dif0}"></p>
+                        <input type="radio" name="difficultyRadio" id="difficulty0">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label for="difficulty1" class="radioLabelContainer">
+                        <input type="radio" name="difficultyRadio" id="difficulty1">
+                        <p th:text="${dif1}"></p>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label for="difficulty2" class="radioLabelContainer">
+                        <input type="radio" name="difficultyRadio" id="difficulty2">
+                        <p th:text="${dif2}"></p>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <p>Choose type of the game: </p>
+                <div id="typeOfGameRadioDiv radioDiv">
+                    <label for="typeOfGame0" class="radioLabelContainer">
+                        <p th:text="${type0}"></p>
+                        <input type="radio" name="typeOfGameRadio" id="typeOfGame0">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label for="typeOfGame1" class="radioLabelContainer">
+                        <p th:text="${type1}"></p>
+                        <input type="radio" name="typeOfGameRadio" id="typeOfGame1">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label for="typeOfGame2" class="radioLabelContainer">
+                        <p th:text="${type2}"></p>
+                        <input type="radio" name="typeOfGameRadio" id="typeOfGame2">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <p>Do you want to name the part of speech of the given word?</p>
+                <div id="usingPartOfSpeechDiv">
+                    <div class="checkboxDiv">
+                        <script>
+                            function changeTitle() {
+                                document.getElementById("partOfSpeechLabel").innerHTML = (document.getElementById("partOfSpeechLabel").innerText==="Yes" ? "No" : "Yes");
+                            }
+                        </script>
+                        <input type="checkbox" id ="partOfSpeechCheckBox">
+                        <label for="partOfSpeechCheckBox" id ="partOfSpeechLabel" onclick="changeTitle()">No</label>
+                    </div>
+                </div>
+                <p>Your username: </p>
+                <div id="usernameInputDiv">
+                    <input type="text">
+                </div>
             </div>
-            <p>Do you want to name the part of speech of the given word?</p>
-            <div id="usingPartOfSpeechDiv">
-                <input type="checkbox">
+            <div id="PlayDiv">
+                <a id="PlayButton" type="submit">Play</a>
             </div>
-            <p>Your username: </p>
-            <div id="usernameInputDiv">
-                <input type="text">
-            </div>
-        </div>
-        <div id="PlayDiv">
-            <a href="#" class="button" id="PlayButton">Play</a>
-        </div>
+        </form>
     </section>
 </body>
 </html>
