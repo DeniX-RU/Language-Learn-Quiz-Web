@@ -1,0 +1,63 @@
+#options-grid {
+    display: grid;
+    position: relative;
+    margin: 36px 36px 0 36px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 8px 10px;
+
+    max-height: 430px;
+    align-items: center;
+}
+
+#options-grid p {
+    justify-self: end;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#options-grid div {
+    justify-self: start;
+}
+
+#radioDiv{
+    display: flex;   
+    flex-direction: column; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#PlayDiv {
+  position: absolute;
+  vertical-align: bottom;
+  bottom: 19px;
+  right: 36px;
+}
+#PlayButton {
+  width: 144px;
+  height: 74px;
+  line-height: 74px;
+
+}
+#BackDiv {
+  position: absolute;
+  vertical-align: bottom;
+  bottom: 19px;
+  left: 36px;
+}
+#BackButton {
+  width: 144px;
+  height: 74px;
+  line-height: 74px;
+}
