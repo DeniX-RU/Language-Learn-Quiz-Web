@@ -1,19 +1,29 @@
 package com.languagelearnquiz.webquiz.game.languages;
 
-public enum Languages {
-    RUS,
-    ENG,
-    RANDOM;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Setter
+@Getter
+@NoArgsConstructor
+public class Languages {
+    public int index = -1;
+    public String title = null;
+
+    public void setIndex(int index) {
+        this.index = index;
+        this.title = getTypeOfGameAsTitle(this.index);
+    }
 
     private static String first(){
-        return String.valueOf(RUS);
+        return String.valueOf(Language.RUS);
     }
     private static String second(){
-        return String.valueOf(ENG);
+        return String.valueOf(Language.ENG);
     }
     private static String third(){
-        return String.valueOf(RANDOM);
+        return String.valueOf(Language.RANDOM);
     }
         private static final String[] languages = new String[]{first(),second(),third()};
     public static String getLanguage(int index) {
@@ -30,7 +40,7 @@ public enum Languages {
     private static String thirdTypeOfGame() {
         return third();
     }
-        private static final String[] types = new String[]{firstTypeOfGame(),secondTypeOfGame(),thirdTypeOfGame()};
+        public static final String[] types = new String[]{firstTypeOfGame(),secondTypeOfGame(),thirdTypeOfGame()};
     public static String getTypeOfGameAsTitle(int index){
         return types[index];
     }

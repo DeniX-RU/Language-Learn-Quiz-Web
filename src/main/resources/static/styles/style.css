@@ -115,18 +115,18 @@ a::before, .checkboxDiv label::before {
     z-index: -1;
 }
 a:active, 
-.checkboxDiv input[type="checkbox"] + label:active {
+.checkboxDiv input[type="checkbox"] ~ label:active {
     top: 4px;
     left: -4px;
     box-shadow: none;
 }
 a:active:before,
-.checkboxDiv input[type="checkbox"] + label:active::before {
+.checkboxDiv input[type="checkbox"] ~ label:active::before {
     bottom: 1px;
     right: 1px;
 }
 a:active:after,
-.checkboxDiv input[type="checkbox"] + label:active::after {
+.checkboxDiv input[type="checkbox"] ~ label:active::after {
     top: 1px;
     left: 1px;
 } 
@@ -212,18 +212,18 @@ a:active:after,
     position: fixed;
     width: 0;
 }
-.checkboxDiv input[type="checkbox"]:checked + label:active {
+.checkboxDiv input[type="checkbox"]:checked ~ label:active {
     box-shadow: none;
 }
 
-.checkboxDiv input[type="checkbox"]:checked + label {
+.checkboxDiv input[type="checkbox"]:checked ~ label {
     box-shadow: -4px 4px 0 var(--button-selected);
     background-color: var(--button-hovered-selected);
 }
-.checkboxDiv input[type="checkbox"]:checked + label::before {
+.checkboxDiv input[type="checkbox"]:checked ~ label::before {
     background-color: var(--button-selected);
 }
-.checkboxDiv input[type="checkbox"]:checked + label::after {
+.checkboxDiv input[type="checkbox"]:checked ~ label::after {
     background-color:  var(--button-selected);
 } 
 /* //////////////// Default Input Text //////////////// */

@@ -18,4 +18,5 @@ public class GameController {
     public String gameLobbyHTML() {
         return "game/lobby/Lobby";
     }
+
 }
