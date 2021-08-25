@@ -20,7 +20,7 @@ public class WebQuizApplication {
 
 
     public static void main(String[] args) {
-        SpringApplication.run(WebQuizApplication.class, args);
+        SpringApplication.run(WebQuizApplication.class, args); //TODO set icon
     }
 
 }
