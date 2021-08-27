@@ -16,20 +16,6 @@ import javax.servlet.http.HttpServletResponse;
 public class SetupController {
     // TODO make this variable to be across all the controllers
 
-    @PostMapping()
-//    @ResponseStatus(value = HttpStatus.OK)
-//    @ResponseStatus(value = HttpStatus.NO_CONTENT)
-    //TODO change method name
-    public Options lg(@ModelAttribute Options options, HttpServletResponse response, Model model) {
-        return options;
-//        if (!highlight(options)) {
-//            response.setStatus(HttpServletResponse.SC_OK);
-//            return "game/lobby/Lobby";
-//        }
-//        response.setStatus(HttpServletResponse.SC_NO_CONTENT);
-//        return null;
-    }
-
     private boolean highlight(Options options) {
         return options.difficulty == null;
     }

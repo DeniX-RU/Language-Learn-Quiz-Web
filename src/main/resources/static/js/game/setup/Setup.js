@@ -119,7 +119,7 @@ function optionsCorrect() {
 
     let result1 = checkDifficulty();
     let result2 = checkLanguage();
-    let result3 = checkUsername();
+    let result3 = checkUsername(); //TODO smth with this thing, cmon it aint cool
     return result1 && result2 && result3;
     // return checkDifficulty() && checkLanguage() && checkUsername();
 }

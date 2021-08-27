@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org"
+    th:replace="base::layout(~{::section},~{::link},~{})">
+<head>
+    <script src="../../../static/js/game/process/Process.js" th:src="@{/js/game/process/Process.js}"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/styles/game/process/style.css" th:href="@{/styles/game/process/style.css}">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <form id="nextWord" method="POST" th:action="@{nextWord}" th:object="${process}">
+            <div id="CancelDiv">
+                <a href="#" id="CancelButton">Back</a>
+<!--                TODO fix buttons-->
+            </div>
+            <div id="answer-grid">
+                <p>0 / <p th:text="*{wordInTheCount}"></p></p>
+                <div class="pointsDiv">
+                    <p>Points: <p th:text="*{points}"></p></p>
+                </div>
+
+                <p>Given word: </p>
+                <p th:text="*{word.original}"></p>
+
+                <p>Translate the word to <p th:text="*{word.translateToLanguage}"></p></p>
+                <input type="text" th:field="*{userTranslation}" placeholder="Multiple words divide by comma">
+
+<!--                TODO Create JS file that will delete two following elements, if state.usingPartsOfSpeech is false-->
+                <p class="typeInput">Input type of the word: </p>
+                <input class="typeInput" type="text" th:field="*{userType}">
+                <div></div>
+                <div id="submitDiv">
+                    <a id="submitButton" onclick="start()"></a>
+                </div>
+            </div>
+            <script th:inline="javascript">
+                /*<![CDATA[*/
+                var usingPartOfSpeech = /*[[${state.usingPartsOfSpeech}]]*/ false;
+                // if (usingPartOfSpeech) {
+
+                // }
+                /*]]>*/
+            </script>
+        </form>
+    </section>
+</body>
+</html>
